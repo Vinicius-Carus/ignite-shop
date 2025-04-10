@@ -4,6 +4,9 @@ import "./globals.css";
 import { getCssText } from "@/styles";
 import { globalStyles } from "@/styles/global";
 
+import logoImage from "@/assets/logo.svg";
+import { Container, Header } from "@/styles/app/layout";
+
 const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
@@ -29,7 +32,14 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: getCssText() }}
         />
       </head>
-      <body className={`${roboto.variable} antialiased`}>{children}</body>
+      <body className={`${roboto.variable} antialiased`}>
+        <Container>
+          <Header>
+            <img src={logoImage.src} alt="" />
+          </Header>
+          {children}
+        </Container>
+      </body>
     </html>
   );
 }
