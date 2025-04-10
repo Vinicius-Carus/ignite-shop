@@ -6,6 +6,7 @@ import { globalStyles } from "@/styles/global";
 
 import logoImage from "@/assets/logo.svg";
 import { Container, Header } from "@/styles/app/layout";
+import Image from "next/image";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function RootLayout({
       <body className={`${roboto.variable} antialiased`}>
         <Container>
           <Header>
-            <img src={logoImage.src} alt="" />
+            <Image src={logoImage.src} alt="" />
           </Header>
           {children}
         </Container>
