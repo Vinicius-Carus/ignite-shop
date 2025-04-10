@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={`${roboto.variable} antialiased`}>
         <Container>
           <Header>
-            <Image src={logoImage.src} alt="" />
+            <Image src={logoImage.src} alt="" width={130} height={52} />
           </Header>
           {children}
         </Container>
